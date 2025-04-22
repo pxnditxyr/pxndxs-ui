@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+
+  --color-scooter-50: #edfdfe;
+  --color-scooter-100: #d0f9fd;
+  --color-scooter-200: #a8f1f9;
+  --color-scooter-300: #6ce3f4;
+  --color-scooter-400: #23cce7;
+  --color-scooter-500: #0cb0ce;
+  --color-scooter-600: #0d8dad;
+  --color-scooter-700: #12718c;
+  --color-scooter-800: #185c72;
+  --color-scooter-900: #184d61;
+  --color-scooter-950: #0a3242;
+}

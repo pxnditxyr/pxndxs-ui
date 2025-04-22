@@ -1,0 +1,28 @@
+# Source files
+src/
+public/
+index.html
+
+# Config files
+.github/
+.vscode/
+.editorconfig
+.eslintrc.js
+.eslintignore
+.prettierrc
+tsconfig.json
+vite.config.ts
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Misc
+.DS_Store
+*.local
+README.md
