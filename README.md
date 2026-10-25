@@ -1,109 +1,76 @@
+<h1 align="center">🐈 Pxndxs UI 🐼</h1>
+
 <p align="center">
-  <h1 align="center"> 🐈  Pxndxs UI 🐼 </h1>
+  <strong>An early-stage Web Components experiment in TypeScript.</strong><br />
+  <a href="./README-es.md">Leer en español</a>
 </p>
-</br>
 
-## 🐈 Pxndxs UI 🐼
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blueviolet?style=for-the-badge" />
+  <img alt="Status" src="https://img.shields.io/badge/status-early_experiment-yellow?style=for-the-badge" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-success?style=for-the-badge" />
+</p>
 
-✨ **A minimalist and adorable Web Components library built with TypeScript.** ✨
+---
 
-![Version](https://img.shields.io/badge/version-0.1.0-blueviolet?style=flat-square)
-![License](https://img.shields.io/badge/license-MIT-success?style=flat-square)
-[![npm](https://img.shields.io/badge/npm-pxndxs--ui-crimson?style=flat-square)](https://www.npmjs.com/package/pxndxs-ui)
+## ✨ What is this?
 
-## 🚀 Features
-- 📅 **DatePicker** - Modern date selection component
-- 🧩 **Native Web Components** (Custom Elements v1)
-- ⚡ **Zero dependencies** - Pure Vanilla JS/TS!
-- 🎨 **Customizable** with CSS variables
-- 📦 **Ultra-lightweight** (< 5KB gzipped)
-- 🌈 **Accessibility** (ARIA-compatible)
+Pxndxs UI is a small playground for building framework-free UI components with the native [Custom Elements](https://developer.mozilla.org/docs/Web/API/Web_components/Using_custom_elements) and [Shadow DOM](https://developer.mozilla.org/docs/Web/API/Web_components/Using_shadow_DOM) APIs.
 
-## 📦 Installation
+Today it ships **one component**, `<date-picker>`. It has no runtime dependencies.
 
-```bash
-npm install pxndxs-ui
-```
+## 📅 `<date-picker>`
 
-or use directly via CDN:
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/pxndxs-ui@latest/dist/main.js"></script>
-```
-
-## 🛠 Basic Usage
+A custom element that renders a native `<input type="date">` inside a Shadow DOM, with an `aria-label` so screen readers announce it.
 
 ```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <script type="module" src="node_modules/pxndxs-ui/dist/main.js"></script>
-  </head>
-  <body>
-    <!-- DatePicker Component -->
-    <date-picker id="my-date" theme="modern"></date-picker>
-  </body>
-</html>
+<date-picker id="birthday"></date-picker>
 ```
 
-### 🎛 Custom Attributes
-| Attribute  | Description                      | Values           |
-|------------|----------------------------------|------------------|
-| `id`       | Unique identifier                | Any string       |
-| `theme`    | Visual style                     | `modern` (default) |
+| Attribute | What it does |
+| --- | --- |
+| `id` | Forwarded to the inner input as `date-picker-<id>` |
 
-## 🏗 Project Structure
-```
-pxndxs-ui/
-├── src/
-│   ├── presentation/
-│   │   └── web/
-│   │       └── components/
-│   │           └── date-pickers/      🗂 Core components
-│   ├── main.ts                        🚀 Entry point
-├── dist/                              📦 Production build
-├── public/                            🖼 Static assets
-└── index.html                         🧪 Development demo`
-```
+That is the whole public surface for now.
 
-## 🧪 Development
+## 🗺️ Roadmap
 
-1. Clone the repository:
+Ideas, not promises:
+
+- [ ] Read and set the value, and emit a `change` event
+- [ ] Theming through CSS custom properties
+- [ ] A custom calendar UI instead of the native input
+- [ ] Tests
+- [ ] Publish to npm
+
+## 🧪 Try it locally
 
 ```bash
 git clone https://github.com/pxnditxyr/pxndxs-ui.git
-```
-
-2. Install dependencies:
-
-```bash
+cd pxndxs-ui
 npm install
-```
-
-3. Start development server:
-
-```bash
 npm run dev
 ```
 
-4. Build for production:
+`index.html` and `src/main.ts` are the demo page. `npm run build` runs `tsc` and `vite build`.
 
-```bash
-npm run build
+## 🗂️ Project structure
+
+```text
+src/
+├── presentation/web/components/date-pickers/   The <date-picker> element
+├── index.ts                                    Public exports
+├── main.ts                                     Demo entry point
+└── style.css                                   Demo styles
+index.html                                      Demo page
 ```
 
-## 🤝 Contributions
-Your contributions are welcome! 🎉
-Follow these steps:
-1. 🍴 Fork the project
-2. 🌿 Create a branch (`git checkout -b feature/awesome-feature`)
-3. 💾 Commit your changes (`git commit -m 'Add awesome feature'`)
-4. 🚀 Push to the branch (`git push origin feature/awesome-feature`)
-5. 🔀 Open a Pull Request
-
 ## 📄 License
-This project is licensed under **MIT** - see the [LICENSE](LICENSE) file for details.
+
+MIT. See [LICENSE](./LICENSE).
 
 ---
 
 Made by [**Pxndxs**](https://github.com/pxnditxyr) 🐼
-Questions? Open an [issue](https://github.com/pxnditxyr/pxndxs-ui/issues)! 🐈
